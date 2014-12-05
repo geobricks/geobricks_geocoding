@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: GeobricksGeocoding
+Version: 0.1.0
+Summary: Geobricks library to manage geocoding.
+Home-page: http://pypi.python.org/pypi/GeobricksGeocoding/
+Author: Simone Murzilli; Guido Barbaglia
+Author-email: geobrickspy@gmail.com
+License: LICENSE.txt
+Description: Geobricks Geocoding
+        =====================
+        
+        
+Keywords: geobricks,geocoding,geopy,gis
+Platform: UNKNOWN

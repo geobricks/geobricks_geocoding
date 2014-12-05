@@ -1,4 +1,3 @@
-geobricks_geocoding
-===================
+Geobricks Geocoding
+=====================
 
-Geobricks geocoding library.
