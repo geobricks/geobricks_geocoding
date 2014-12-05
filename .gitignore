@@ -2,3 +2,5 @@
 *.md~
 /docs/
 *.iml
+/epydoc.config~
+*.txt~
