@@ -29,11 +29,19 @@ def get_locations(places):
                     time.sleep(waiting_sleep_time)
                 time.sleep(request_sleep_time)
                 result = get_location(place)
-                cached_places[place] = result
-                results.append(result)
+                if result is not None:
+                    cached_places[place] = result
+                    results.append(result)
+                else:
+                    results.append([])
         return results
     except Exception, e:
+        log.warn(e)
+        # TODO: remove it from here
+        results.append([])
         pass
+    finally:
+        return results
 
 def get_location(place):
     """
@@ -45,7 +53,10 @@ def get_location(place):
     try:
         location = geolocator.geocode(place)
         rlock = False
-        return [location.latitude, location.longitude]
+        if location is not None:
+            return [location.latitude, location.longitude]
+        else:
+            return []
     except Exception, e:
         raise Exception(e)
 

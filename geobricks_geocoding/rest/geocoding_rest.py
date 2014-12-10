@@ -38,6 +38,9 @@ def find_geocoding(name):
     print name
     names = name.split("|")
     result = get_locations(names)
+    print result
+    if result is None:
+        result = []
     return Response(json.dumps(result), content_type='application/json; charset=utf-8')
 
 
