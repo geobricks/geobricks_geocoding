@@ -21,7 +21,7 @@ def discovery():
     out = {
         'name': 'Geocoding service',
         'description': 'Geocoding service.',
-        'type': 'geocoding'
+        'type': 'SERVICE'
     }
     return Response(json.dumps(out), content_type='application/json; charset=utf-8')
 
