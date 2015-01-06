@@ -26,8 +26,8 @@ def discovery():
     return Response(json.dumps(out), content_type='application/json; charset=utf-8')
 
 
-@app.route('/latlon/<name>', methods=['GET'])
-@app.route('/latlon/<name>', methods=['GET'])
+@app.route('/place/<name>', methods=['GET'])
+@app.route('/place/<name>', methods=['GET'])
 @cross_origin(origins='*')
 def find_geocoding(name):
     '''
