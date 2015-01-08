@@ -10,6 +10,16 @@ log = logger(__file__)
 
 app = Blueprint("geocoding", "geocoding")
 
+
+@app.route('/')
+@cross_origin(origins='*')
+def root():
+    """
+    Root REST service.
+    @return: Welcome message.
+    """
+    return 'Welcome to Geocoding Service!'
+
 @app.route('/discovery/')
 @app.route('/discovery')
 @cross_origin(origins='*')
@@ -42,5 +52,3 @@ def find_geocoding(name):
     if result is None:
         result = []
     return Response(json.dumps(result), content_type='application/json; charset=utf-8')
-
-
