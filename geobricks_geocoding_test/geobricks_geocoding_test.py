@@ -9,6 +9,11 @@ class GeobricksTest(unittest.TestCase):
         location = get_locations(["Rome"])
         self.assertEqual(location, [[41.8933439, 12.4830718]])
 
-if __name__ == '__main__':
+
+def run_test():
     suite = unittest.TestLoader().loadTestsFromTestCase(GeobricksTest)
     unittest.TextTestRunner(verbosity=2).run(suite)
+
+if __name__ == '__main__':
+    run_test()
+
