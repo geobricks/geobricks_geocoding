@@ -51,7 +51,7 @@ def get_location(place):
              return None if place not found
     """
     try:
-        location = geolocator.geocode(place)
+        location = geolocator.geocode(place.lower())
         rlock = False
         if location is not None:
             return [location.latitude, location.longitude]
