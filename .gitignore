@@ -4,3 +4,4 @@
 *.iml
 /epydoc.config~
 *.txt~
+/GeobricksGeocoding.egg-info/
