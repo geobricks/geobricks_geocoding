@@ -1,5 +1,5 @@
 from geopy.geocoders import Nominatim
-from geobricks_geocoding.utils.log import logger
+from geobricks_common.core.log import logger
 import time
 
 log = logger(__file__)

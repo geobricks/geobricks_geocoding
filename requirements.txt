@@ -1,0 +1,5 @@
+watchdog
+flask
+flask-cors
+geopy
+geobricksCommon

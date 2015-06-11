@@ -14,7 +14,8 @@ setup(
         'watchdog',
         "flask",
         'flask-cors',
-        'geopy'
+        'geopy',
+        'geobricksCommon'
     ],
     url='http://pypi.python.org/pypi/GeobricksGeocoding/',
     keywords=['geobricks', 'geocoding', 'geopy', 'gis']
