@@ -2,7 +2,8 @@ language: python
 python:
   - "2.7"
 install:
-  - pip install -r requirements.txt
-  - pip install pytest pytest-cov
+  - "pip install -r requirements.txt"
+  - "pip install pytest pytest-cov"
+  - "pip install -e ."   # install package using setup.py in editable mode
 script:
-   - py.test --cov geobricks_common_test/core/geobricks_common_test.py --cov-report term-missing
+   - py.test --cov geobricks_geocoding --cov-report term-missing
