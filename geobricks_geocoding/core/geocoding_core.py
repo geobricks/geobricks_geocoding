@@ -10,6 +10,7 @@ rlock = False
 cached_places = {}
 request_sleep_time = 1.1
 waiting_sleep_time = 0.5
+timeout = 30
 
 
 def get_locations(places):
@@ -51,7 +52,7 @@ def get_location(place):
              return None if place not found
     """
     try:
-        location = geolocator.geocode(place.lower())
+        location = geolocator.geocode(place.lower(), timeout=timeout)
         rlock = False
         if location is not None:
             return [location.latitude, location.longitude]
