@@ -15,7 +15,7 @@ setup(
         "flask",
         'flask-cors',
         'geopy',
-        'geobricksCommon'
+        'GeobricksCommon'
     ],
     url='http://pypi.python.org/pypi/GeobricksGeocoding/',
     keywords=['geobricks', 'geocoding', 'geopy', 'gis']
