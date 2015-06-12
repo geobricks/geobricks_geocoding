@@ -14,7 +14,7 @@ class GeobricksTest(unittest.TestCase):
     def test_discovery(self):
         response = self.tester.get('/geocoding/discovery/', content_type='application/json')
         out = json.loads(response.data)
-        self.assertEquals(out['title'], 'Geocoding service')
+        self.assertEquals(out['name'], 'Geocoding service')
 
     def test_find_geocoding(self):
         response = self.tester.get('/geocoding/place/Rome', content_type='application/json')
