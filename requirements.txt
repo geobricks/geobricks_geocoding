@@ -2,4 +2,4 @@ watchdog
 flask
 flask-cors
 geopy
-GeobricksCommon
+-e git://github.com/geobricks/geobricks_common/archive/development.zip
