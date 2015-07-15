@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='GeobricksGeocoding',
-    version='0.1.4',
+    version='0.1.5',
     author='Simone Murzilli; Guido Barbaglia',
     author_email='geobrickspy@gmail.com',
     packages=find_packages(),
