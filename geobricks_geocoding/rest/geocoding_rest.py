@@ -1,9 +1,10 @@
 import json
 import os
+import urllib2
 from flask import Blueprint
-from flask import Response
+from flask import Response, request, url_for
 from flask.ext.cors import cross_origin
-from geobricks_geocoding.utils.log import logger
+from geobricks_common.core.log import logger
 from geobricks_geocoding.core.geocoding_core import get_locations
 
 log = logger(__file__)
@@ -45,10 +46,9 @@ def find_geocoding(name):
     :param name: String of places separated by "|"
     :return: an array or array containing the different lat and lon
     '''
-    print name
+    log.info("Searching for places: " + name)
     names = name.split("|")
     result = get_locations(names)
-    print result
     if result is None:
         result = []
     return Response(json.dumps(result), content_type='application/json; charset=utf-8')

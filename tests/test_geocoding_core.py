@@ -7,6 +7,7 @@ class GeobricksTest(unittest.TestCase):
 
     def test_get_locations(self):
         location = get_locations(["Rome"])
+        print location
         self.assertEqual(location, [[41.8933439, 12.4830718]])
 
 
